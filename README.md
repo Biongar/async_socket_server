@@ -2,7 +2,9 @@
 
 ## Description
 
-> 
+> This project is a copy of David Beasley's algorithm that he showed at PyCon 2015 (OOP rework). 
+> It shows us how we can write asynchronous Python code using sync sockets, 
+> generators to control program execution, and an event loop.
 
 ## Create virtual environment
 
@@ -13,24 +15,24 @@ source venv/bin/activate;
 
 ## Open 3 or more terminals 
 
-> CTRL + ALT + T
-
-### First console:
+### First terminal:
 
 ``` bash
 python server.py;
 ```
 
-### Second and third console:
+### Second and third terminal:
 
 ``` bash
 python client.py;
 ```
 
-### OR use NetCat
+### OR use NetCat:
 
 ``` bash
 nc 127.0.0.1 8000;
 ```
 
-> Now you can just write normally messages in **second** and **third** consoles and send them to the server. You will see how it works asynchronously despite the fact that the code contains **blocking functions** and **infinite loops**.
+> Now you can write messages in the **second** and **third** terminal and send them to the server. 
+> You will see how it works asynchronously, despite the fact that the code 
+> contains **blocking functions** and **infinite loops**.
